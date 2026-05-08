@@ -35,7 +35,7 @@
             line-height: 1.6;
         }
 
-        /* A4 Page Simulation */
+        /* A4 Page Simulation & Responsiveness */
         .page {
             width: 210mm;
             min-height: 297mm;
@@ -44,6 +44,43 @@
             padding: 20mm;
             position: relative;
             overflow: hidden;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0;
+                background-color: var(--white);
+            }
+            .page {
+                width: 100%;
+                min-height: auto;
+                box-shadow: none;
+                padding: 20px;
+                overflow: visible;
+            }
+            .header-img {
+                width: calc(100% + 40px) !important;
+                margin-left: -20px !important;
+                margin-top: -20px !important;
+                height: 100px !important;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            table {
+                min-width: 500px;
+            }
+            .price {
+                font-size: 1.4rem;
+            }
         }
 
         header {
@@ -279,32 +316,34 @@
             <h2 class="section-title">Desarrollo Web: Marca Profesional</h2>
             <p>Desarrollo de Landing Page de Consultoría Independiente.</p>
             
-            <table>
-                <thead>
-                    <tr>
-                        <th>Módulo</th>
-                        <th>Detalle Técnico y Funcional</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Frontend Architecture</strong></td>
-                        <td>Desarrollo Single Page Application (SPA) optimizado para Core Web Vitals (Velocidad y SEO).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Branding Técnico</strong></td>
-                        <td>Curaduría de contenidos: Bio, Matrix de Expertise, Casos de Éxito y Propuesta de Valor.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Integraciones Automáticas</strong></td>
-                        <td>CTA directo a WhatsApp Business para contacto inmediato.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Deployment & SSL</strong></td>
-                        <td>Configuración de entorno productivo con certificado de seguridad HTTPS activo.</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Módulo</th>
+                            <th>Detalle Técnico y Funcional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frontend Architecture</strong></td>
+                            <td>Desarrollo Single Page Application (SPA) optimizado para Core Web Vitals (Velocidad y SEO).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Branding Técnico</strong></td>
+                            <td>Curaduría de contenidos: Bio, Matrix de Expertise, Casos de Éxito y Propuesta de Valor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Integraciones Automáticas</strong></td>
+                            <td>CTA directo a WhatsApp Business para contacto inmediato.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deployment & SSL</strong></td>
+                            <td>Configuración de entorno productivo con certificado de seguridad HTTPS activo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
             <p style="text-align: right; margin-top: 10px;">
                 <span style="font-size: 0.9rem; color: #64748b;">Inversión Única (Desarrollo):</span><br>
